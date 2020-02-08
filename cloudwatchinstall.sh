@@ -1,10 +1,8 @@
 #!/bin/bash
 echo "Updating the Kernel and all packages"
-sudo yum -y update 
+sudo yum -y update
 echo "Installing the CloudWatch Agent"
-curl https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
-if []
-
+curl -O https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py 
 sudo python ./awslogs-agent-setup.py --region us-east-1
 else
 sudo python3 ./awslogs-agent-setup.py --region us-east-1
@@ -23,5 +21,5 @@ sudo ./install.sh
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a put-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
 
-#Fetching the ssm parameter file 
+#Fetching the ssm parameter file
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c ssm: AmazonCloudWatch-linux -s
