@@ -114,7 +114,17 @@ John,London
 Arthur,Newport
 George,Truro
 ```
+# tee in Linux
 
+```
+echo 'navaneeth' | tee data.txt                                                                             ### Creates data.txt file and writes standard out to file 
+
+echo 'reddy' | tee -a data.txt                                                                              ### Append new data to file with -a flag
+
+
+tail -f /var/log/nginx/access.log | grep --line-buffered "HTTP/2.0" | tee -a new.log                        ### Tailing the log file and looking for HTTP/2.0 code and writing to new.log
+
+```
 # Loop Syntax
 
 IF-ELSE
