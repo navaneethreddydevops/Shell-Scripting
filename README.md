@@ -4,11 +4,11 @@ Repo for shell syntax and Code files for Reference
 
 # Shortcuts in shell
 
-```
-touch ~/.bashrc
-
+## Syntax:
 ** alias newcommand='yourcommand -arguments' **
 
+```
+touch ~/.bashrc
 alias c='clear'
 alias cp="cp -i"
 alias ls="ls -al"
