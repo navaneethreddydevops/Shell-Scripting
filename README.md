@@ -86,9 +86,7 @@ export AWS_REGION="us-east-1"
 
 ```
 find -name README.md
-
 find ./ShellScriptingBasics -name Basics.md -delete
-
 find ./ShellScriptingBasics -name Basics.md -exec rm -i {} \;    ### Prompts user for deleting file
 
 ```
