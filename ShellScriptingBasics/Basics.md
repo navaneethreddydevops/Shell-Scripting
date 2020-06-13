@@ -1,4 +1,4 @@
-# Shell Scripting Basics
+# Advanced Shell Scripting
 
 ```
 #!/bin/bash

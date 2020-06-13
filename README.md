@@ -2,6 +2,32 @@
 
 Repo for shell syntax and Code files for Reference
 
+# SSH Configurations
+
+```
+touch ~/.ssh/config
+chmod 644 ~/.ssh/config
+
+cat << EOF >> /.ssh/config
+Host bastion
+  HostName bastion.com
+  Port 22
+  User navaneeth
+  IdentityFile ~/.ssh/foobar.key   ### Private Key file to match finger print
+  Host *
+     ForwardAgent no
+     ForwardX11 no
+     ForwardX11Trusted yes
+     User navaneeth
+     Port 22
+     Protocol 2
+EOF
+```
+
+```
+ssh -v bastion
+```
+
 # Shortcuts in shell
 
 ```
@@ -57,6 +83,39 @@ env
 set AWS_REGION="us-east-1" 
 unset AWS_REGION="us-east-1"
 export AWS_REGION="us-east-1"
+```
+
+# Finding Files in Linux:
+
+```
+find -name README.md
+
+find ./ShellScriptingBasics -name Basics.md -delete
+
+find ./ShellScriptingBasics -name Basics.md -exec rm -i {} \;    ### Prompts user for deleting file
+
+```
+# CUT Command in Linux
+
+``` 
+names.csv
+John,Smith,34,London
+Arthur,Evans,21,Newport
+George,Jones,32,Truro
+```
+
+```
+cut -d ',' -f 1 names.csv
+John
+Arthur  
+George
+```
+
+```
+cut -d ',' -f 1,4 names.csv
+John,London
+Arthur,Newport
+George,Truro
 ```
 
 # Loop Syntax
