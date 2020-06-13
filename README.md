@@ -4,8 +4,9 @@ Repo for shell syntax and Code files for Reference
 
 # Shortcuts in shell
 
-## Syntax:
-** alias newcommand='yourcommand -arguments' **
+```
+alias newcommand='yourcommand -arguments'
+```
 
 ```
 touch ~/.bashrc
@@ -23,3 +24,13 @@ alias gf="git fetch; git pull"
 unalias c
 unalias dc
 ```
+
+# Variables in Shell
+
+export AWS_REGION="us-east-1a"
+export AWS_PROFILE='DEVELOPER'
+
+echo $AWS_REGION
+echo $AWS_PROFILE
+
+String Variables can be assigned to a varibale in "" or ''
