@@ -125,6 +125,11 @@ echo 'reddy' | tee -a data.txt                                                  
 tail -f /var/log/nginx/access.log | grep --line-buffered "HTTP/2.0" | tee -a new.log                        ### Tailing the log file and looking for HTTP/2.0 code and writing to new.log
 
 ```
+# uniq command in Linux
+```
+uniq data.csv 
+uniq data.csv | sort 
+```
 # Loop Syntax
 
 IF-ELSE
