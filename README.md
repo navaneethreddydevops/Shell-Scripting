@@ -34,3 +34,44 @@ echo $AWS_REGION
 echo $AWS_PROFILE
 ```
 String Variables can be assigned to a varibale in "" or ''
+
+
+# Default System Level Variables:
+```
+$SHELL
+$USER
+$PATH
+$HOME
+$EDITOR
+$LOGNAME
+$LANG
+$TERM
+$MAIL
+$BASH_VERSION
+```
+
+# Environment Varibales:
+```
+printenv
+env
+set AWS_REGION="us-east-1" 
+unset AWS_REGION="us-east-1"
+export AWS_REGION="us-east-1"
+```
+
+# Loop Syntax
+
+IF-ELSE
+
+CASE
+
+FOR-LOOP
+
+# Defining Functions:
+
+```
+function describeinstances(){
+    aws ec2 describe instances --region us-east-1 --profile DEVELOPER
+}
+
+```
