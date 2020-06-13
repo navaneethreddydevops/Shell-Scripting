@@ -129,11 +129,10 @@ uniq data.csv | sort
 # EXIT Codes in Shell scripts
 
 ```
-
-
-
+$0   ----> Script file name
+$?   ----> Checks for exit code and prints
+$*   ----> Takes all the parameters to script
 ```
-
 # Loop Syntax
 
 IF-ELSE
