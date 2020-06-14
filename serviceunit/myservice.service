@@ -1,0 +1,11 @@
+[Unit]
+Description=Fist Unit service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/servicescript.sh
+RestartSec=10s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
